@@ -17,3 +17,10 @@ func TernaryPointer[T any](value *T, fallback *T) *T {
 	}
 	return fallback
 }
+
+func TernaryExpression[T any](expression bool, left T, right T) T {
+	if expression {
+		return left
+	}
+	return right
+}
